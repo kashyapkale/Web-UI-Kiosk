@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, Component } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { SendIcon, XIcon, ShoppingCartIcon, MessageSquareIcon } from 'lucide-react';
 import { MenuItem, menuItems } from '../../data/menuData';
@@ -106,7 +106,7 @@ export const ChatInterface: React.FC = () => {
   return <>
       {/* Floating Chat Input Bar (shown when full chat is closed) */}
       <AnimatePresence>
-        {!isFullChatOpen && <motion.div className="fixed bottom-8 right-8 w-[300px] z-30" initial={{
+        {!isFullChatOpen && <motion.div className="fixed bottom-8 left-0 right-0 mx-auto w-1/2 z-30" initial={{
         y: 100,
         opacity: 0
       }} animate={{
